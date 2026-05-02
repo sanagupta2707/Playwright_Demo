@@ -1,0 +1,29 @@
+{
+  "name": "ezsign_playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "node ./scripts/cleanReports.js",
+    "test": "npx playwright test",
+    "allure:generate": "npm run clean:reports && npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Hello Git",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.18.12",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.3.3",
+    "playwright": "^1.49.0",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}
